@@ -6,8 +6,6 @@ function handleClick(e) {
 }
 
 
-
-
 // <!-- 
 // **NOTE:** The value returned from the `<input>` will be of type `String`.
 // You’ll need to take the `String` of the 24 hour time and covert it to a number.
@@ -27,7 +25,6 @@ function handleClick(e) {
 
 
 
-
 function greet(string) {
 
 	let hour = string.split(":")
@@ -38,17 +35,17 @@ function greet(string) {
 
 
 	if(hours < 12) {
-		return console.log("Good Morning")
+		return "Good Morning"
 	}
 
 	if (12 < hours && hours < 17) {
 
-		return console.log("Good Afternoon")
+		return "Good Afternoon"
 	}
 
 	if (17 < hours && hours < 24) {
 
-		return console.log("Good Evening")
+		return "Good Evening"
 	}
 
 }
@@ -56,6 +53,9 @@ function greet(string) {
 
 function displayMessage(string){
 
-	console.log("Displaying")
+let content = document.getElementById("greeting")
+
+content.innerText = string 
+
 
 }
